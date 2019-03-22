@@ -170,12 +170,54 @@ div.grid-container {
 div.grid-container a {
     background-color: var(--highlight-color);
     border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: grid;
+	padding: 10px;
+    text-align: center;
     height: 100%;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 15px;
+	color: var(--gray-border-color);
+	align-items: center;
+	
+}
+
+
+div.grid-container a::before {
+    font-size: 48px;
+    font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+}
+@media only screen and (min-width: 768px){
+	div.grid-container a::before {
+		font-size: 60px;
+		
+		
+	}
+}
+
+
+div.grid-container a.ventas:before {
+    content: "\f788";
+}
+
+div.grid-container a.facturas:before {
+    content: "\f15c";
+}
+
+div.grid-container a.clientes:before {
+    content: "\f0c0";
+}
+
+div.grid-container a.proveedores:before {
+    content: "\f0d1";
+}
+
+div.grid-container a.productos:before {
+    content: "\f472";
+}
+
+div.grid-container a.creditos:before {
+    content: "\f09d";
 }
 
 div.grid-container a:hover {
@@ -195,7 +237,11 @@ div.grid-container a:hover {
     div.grid-container {
         grid-template-columns: auto auto auto;
         height: 40%;
-        max-width: 600px;
+        max-width: 800px;
+        min-width: 600px;
+    }
+    div.grid-container a {
+        min-width: 150px;
     }
 }
 
