@@ -116,6 +116,22 @@ p {
     margin: 0;
 }
 
+.back-button {
+    text-decoration: none;
+    background-color: red;
+    border-radius: 5px;
+    padding: 3px 10px;
+    display: inline-block;
+    color: var(--white-color);
+    font-size: 20px;
+}
+
+.back-button::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f060'
+}
+
 /* 
     ==== index.html ====
 */
@@ -170,31 +186,27 @@ div.grid-container {
 div.grid-container a {
     background-color: var(--highlight-color);
     border-radius: 10px;
-	display: grid;
-	padding: 10px;
+    display: grid;
+    padding: 10px;
     text-align: center;
     height: 100%;
     text-decoration: none;
     font-size: 15px;
-	color: var(--gray-border-color);
-	align-items: center;
-	
+    color: var(--gray-border-color);
+    align-items: center;
 }
-
 
 div.grid-container a::before {
     font-size: 48px;
     font-family: "Font Awesome 5 Free";
-	font-weight: 900;
-}
-@media only screen and (min-width: 768px){
-	div.grid-container a::before {
-		font-size: 60px;
-		
-		
-	}
+    font-weight: 900;
 }
 
+@media only screen and (min-width: 768px) {
+    div.grid-container a::before {
+        font-size: 60px;
+    }
+}
 
 div.grid-container a.ventas:before {
     content: "\f788";
@@ -248,6 +260,50 @@ div.grid-container a:hover {
 /* 
     ==== clientes.html ====
 */
+
+/* 
+    ==== catalogos.html ====
+*/
+
+div.grid-main-container {
+    display: grid;
+    grid-template-columns: 35px auto;
+    height: 100%;
+}
+
+div.menu-lateral {
+    background-color: var(--primary-color);
+}
+
+div.main-container {
+    padding: 5px;
+}
+
+@media only screen and (min-width: 400px) {
+    div.grid-main-container {
+        grid-template-columns: 120px auto;
+    }
+    div.menu-lateral {
+        min-width: 120px;
+    }
+}
+
+nav.menu-catalogos ul {
+    padding: 0;
+    margin: 0;
+}
+
+nav.menu-catalogos ul li {
+    text-decoration: none;
+    color: var(--white-color);
+    list-style: none;
+    padding: 10px;
+    border-bottom: 1px solid var(--highlight-color);
+}
+
+div.tab {
+    border: 1px solid black;
+}
 
 /* ==========================================================================
    Helper classes
